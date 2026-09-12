@@ -4,6 +4,7 @@ using MyBlazorApp;
 using System.Text.RegularExpressions;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.Services.AddSingleton<ApiService>();
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
